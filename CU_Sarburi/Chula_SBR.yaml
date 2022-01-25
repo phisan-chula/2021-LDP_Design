@@ -1,0 +1,16 @@
+#
+# Example for Low Distortion Projection design
+#
+KML      : Chula_SBR.kml         # a linestring or a polygon in GE
+GRID     : 2                     #  1 : 10,  2: 100,  3: 1000
+BUFF     : 150                   # buffer for linestring 
+LDP :
+   TMC : +proj=tmerc +lat_0=0 +lon_0=101.03333333333333 +k=1.0000071
+         +x_0=+0 +y_0=+0 +a=6378137 +b=6356752.3142 +units=m +no_defs
+   LCC : proj=lcc +lon_0=101.03333333333333 +lat_0=14.533333333333333
+         +lat_1=14.533333333333333 +lat_2=14.533333333333333 +k_0=1.0000071
+         +x_0=+0 +y_0=+0 +a=6378137 +b=6356752.3142 +units=m +no_defs
+   OMC : proj=omerc +lat_0=14.533333333333333 +lonc=101.03333333333333
+         +x_0=+0 +y_0=+0 +alpha=+45 +k_0=1.0000071
+         +a=6378137.0 +b=6356752.3142 +units=m +no_defs
+

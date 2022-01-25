@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>Chula_SBR.kml</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+		<PolyStyle>
+			<fill>0</fill>
+		</PolyStyle>
+	</Style>
+	<Folder>
+		<name>Chula_SBR</name>
+		<open>1</open>
+		<Placemark>
+			<name>Boundary</name>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<Polygon>
+				<tessellate>1</tessellate>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							101.0161241856942,14.51446037300996,0 101.028434969516,14.52210984751846,0 101.0295712354131,14.52187345532757,0 101.0325279244908,14.52145454886874,0 101.0349164305695,14.52455221912475,0 101.0363801430928,14.51798829872856,0 101.0402499880233,14.51818374053074,0 101.0429118773209,14.51817784910788,0 101.0430705929846,14.51603168506359,0 101.0459096703466,14.51648798296872,0 101.0454840846229,14.52218852065468,0 101.0498243174426,14.52323468302463,0 101.0511483279187,14.52515388334143,0 101.0474058576027,14.52763608958497,0 101.0535252511533,14.53442610861362,0 101.0452795247874,14.54286766891629,0 101.0379939934302,14.54092545073515,0 101.0312014204183,14.54309576005083,0 101.0258507827814,14.54512384813552,0 101.0232355891509,14.5399963242852,0 101.019156179506,14.53424731619888,0 101.0154067638123,14.53560975353819,0 101.0123130921673,14.52985974580586,0 101.0084241270074,14.52901137968217,0 101.0161241856942,14.51446037300996,0 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

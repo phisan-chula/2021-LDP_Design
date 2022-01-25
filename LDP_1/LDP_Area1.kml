@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document>
+	<name>LDP_Area1.kml</name>
+	<StyleMap id="m_ylw-pushpin">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#s_ylw-pushpin</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#s_ylw-pushpin_hl</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="s_ylw-pushpin">
+		<IconStyle>
+			<scale>1.1</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Style id="s_ylw-pushpin_hl">
+		<IconStyle>
+			<scale>1.3</scale>
+			<Icon>
+				<href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+			</Icon>
+			<hotSpot x="20" y="2" xunits="pixels" yunits="pixels"/>
+		</IconStyle>
+	</Style>
+	<Folder>
+		<name>LDP_Area1</name>
+		<open>1</open>
+		<Placemark>
+			<name>CenterLine</name>
+			<styleUrl>#m_ylw-pushpin</styleUrl>
+			<LineString>
+				<tessellate>1</tessellate>
+				<coordinates>
+					99.27751466315503,16.716363499696,0 99.25156029242423,16.72783223945819,0 99.23112605714421,16.73790127086132,0 99.22803711029941,16.74565589309258,0 99.21343310478764,16.76115475805911,0 99.19103298059052,16.79106753092566,0 99.17903022549837,16.79973896008446,0 99.17205876997167,16.80236676022824,0 99.16655483047782,16.79863626213973,0 99.16121164768605,16.7959918075406,0 99.14693882640502,16.80496877843036,0 99.13540758182431,16.82077565738405,0 99.1227359368882,16.83797908015839,0 99.1172130770312,16.84433300426361,0 99.10522902170283,16.83826325332542,0 99.10101980077413,16.83546378843812,0 99.09048099352388,16.83622349463824,0 99.08303317747593,16.83155669778125,0 99.07153913645651,16.82362469032719,0 
+				</coordinates>
+			</LineString>
+		</Placemark>
+	</Folder>
+</Document>
+</kml>

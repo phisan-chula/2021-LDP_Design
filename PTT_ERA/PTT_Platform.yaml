@@ -1,0 +1,12 @@
+#
+# Example for Low Distortion Projection design
+#
+KML      : PTT_Platform.kml      # a linestring or a polygon in GE
+CLAMP_MSL : 30                   # elevate all DEM to specified MSL! 
+GRID     : 2                     #  1 : 10,  2: 100,  3: 1000
+BUFF     : 0                     # buffer for linestring 
+LDP :
+  TMC : +proj=tmerc +lat_0=9.066666666666666 +lon_0=101.3
+        +k_0=1.0000016 +x_0=+2500 +y_0=+7000 +ellps=GRS80 +units=m +no_defs
+
+CSV_UTM :  MeasPnt.csv

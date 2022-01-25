@@ -1,0 +1,14 @@
+#
+# Example for Low Distortion Projection design for AREA_1
+#
+KML      : LDP_Area1.kml         # a linestring or a polygon in GE
+GRID     : 2                     #  1 : 10,  2: 100,  3: 1000
+BUFF     : 250                    # buffer for linestring 
+CLAMP_MSL : 105                 # Project Plane fix to .....
+
+LDP :
+        TMC : +proj=tmerc +lat_0=16.783333333333335 +lon_0=99.16666666666667 
+              +k_0=1.0000114 +x_0=+0 +y_0=+0 +ellps=GRS80 +units=m +no_defs
+
+#CSV_UTM  : DOH107_GNSS.csv   # control point / setting out files
+ 

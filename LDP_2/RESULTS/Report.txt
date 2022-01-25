@@ -1,0 +1,75 @@
+********************** uiDesign ************************
+*** P.Santitamnont (phisan.chula@gmail.com) Oct.2021 ***
+********************************************************
+Reading YAML LDP_2/Area_2.yaml ...
+Writing all results in directory/folder LDP_2/RESULTS ...
+Reading KML LDP_2/Area_2.kml ...
+Input Linestring with length 46,474 m.
+*** [1] Topography Summary ... ***
+        MSL  UNDUL   HAE   HSF
+count 2,227  2,227 2,227 2,227
+mean    508    -38   469   -74
+std     195      0   195    31
+min     188    -39   149  -144
+25%     351    -39   312  -101
+50%     458    -38   419   -66
+75%     682    -38   644   -49
+max     955    -38   917   -23
+============================================================
+Mean topo MSL over ROI : 508  m.
+Mean topo HAE over ROI : 469 m.
+k_0 PP coincided with topo : 1.0000738 (exact 7-digit)
+Mean Latitude of ROI    : ('16°47′', 16.783333333333335)
+Mean Longitude of ROI   : ('98°49′', 98.81666666666666)
+============================================================
+*** [2] SUGGESTION DESIGN ... ***
+LDP :
+   TMC : +proj=tmerc +lat_0=16.783333333333335 +lon_0=98.81666666666666 
+         +k_0=1.0000738 +x_0=+0 +y_0=+0 +ellps=GRS80 +units=m +no_defs
+   LCC : proj=lcc +lon_0=98.81666666666666 +lat_0=16.783333333333335
+         +lat_1=16.783333333333335  +k_0=1.0000738 
+         +x_0=+0 +y_0=+0 +ellps=GRS80 +units=m +no_defs
+   OMC : proj=omerc +lat_0=16.783333333333335 +lonc=98.81666666666666 
+         +x_0=+0 +y_0=+0 +alpha=+45 +k_0=1.0000738 
+         +ellps=GRS80 +units=m +no_defs 
+*** [3] PROCESSING LDP and PSF/CSF Analysis ... ***
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+UTM : +proj=utm +zone=47 +datum=WGS84 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        UTM_E     UTM_N  UTM_PSF  UTM_CSF
+count   2,227     2,227    2,227    2,227
+mean  480,953 1,854,704     -394     -467
+std    12,306     2,476        6       32
+min   459,100 1,852,400     -400     -543
+25%   470,300 1,852,900     -399     -492
+50%   481,400 1,853,300     -396     -458
+75%   491,600 1,856,500     -389     -443
+max   501,900 1,860,000     -379     -418
+Plotting result in LDP_2/RESULTS/CSF_UTM.png ...
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+TMC : +proj=tmerc +lat_0=16.7833333333333 +lon_0=98.8166666666667 +k=1.0000437 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        TMC_E  TMC_N  TMC_PSF  TMC_CSF
+count   2,227  2,227    2,227    2,227
+mean      491   -892       46      -28
+std    12,310  2,486        2       31
+min   -21,371 -3,195       44      -99
+25%   -10,165 -2,697       44      -55
+50%       940 -2,308       45      -21
+75%    11,141    915       47       -5
+max    21,443  4,423       49       26
+Plotting result in LDP_2/RESULTS/CSF_TMC.png ...
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+LCC : +proj=lcc +lat_1=16.7833333333333 +lat_0=16.7833333333333 +lon_0=98.8166666666667 +k_0=1.0000437 +x_0=0 +y_0=0 +ellps=GRS80 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        LCC_E  LCC_N  LCC_PSF  LCC_CSF
+count   2,227  2,227    2,227    2,227
+mean      491   -892       44      -30
+std    12,310  2,486        0       31
+min   -21,371 -3,195       44     -100
+25%   -10,165 -2,697       44      -57
+50%       940 -2,308       44      -22
+75%    11,141    915       44       -5
+max    21,443  4,423       44       20
+Plotting result in LDP_2/RESULTS/CSF_LCC.png ...
+*** [4] Write report and sampling GIS file ... ***

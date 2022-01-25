@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document id="root_doc">
+    <Schema id="PTT_Platform.schema">
+      <SimpleField name="Platform" type="string"/>
+      <SimpleField name="N" type="float"/>
+      <SimpleField name="E" type="float"/>
+    </Schema>
+    <Document id="PTT_Platform">
+      <name>PTT_Platform</name>
+      <Placemark id="PTT_Platform.1">
+        <ExtendedData>
+          <SchemaData schemaUrl="#PTT_Platform.schema">
+            <SimpleData name="Platform">PRP Jacket</SimpleData>
+            <SimpleData name="N">1003706.199999999953434</SimpleData>
+            <SimpleData name="E">752734.500000000000000</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            101.299255701264,9.07284941430012,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="PTT_Platform.2">
+        <ExtendedData>
+          <SchemaData schemaUrl="#PTT_Platform.schema">
+            <SimpleData name="Platform">Flare Tripod</SimpleData>
+            <SimpleData name="N">1003701.099999999976717</SimpleData>
+            <SimpleData name="E">752594.699999999953434</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            101.297984278828,9.07281131934137,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="PTT_Platform.3">
+        <ExtendedData>
+          <SchemaData schemaUrl="#PTT_Platform.schema">
+            <SimpleData name="Platform">Pedestrian Tripod</SimpleData>
+            <SimpleData name="N">1003597.099999999976717</SimpleData>
+            <SimpleData name="E">752774.199999999953434</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            101.299610391176,9.07186112670767,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="PTT_Platform.4">
+        <ExtendedData>
+          <SchemaData schemaUrl="#PTT_Platform.schema">
+            <SimpleData name="Platform">ERP Jacket</SimpleData>
+            <SimpleData name="N">1003541.760000000009313</SimpleData>
+            <SimpleData name="E">752767.770000000018626</SimpleData>
+          </SchemaData>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            101.299548740879,9.071361346973,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Document>
+  </Document>
+</kml>

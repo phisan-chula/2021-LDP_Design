@@ -1,0 +1,62 @@
+********************** uiDesign ************************
+*** P.Santitamnont (phisan.chula@gmail.com) Oct.2021 ***
+********************************************************
+Reading YAML PTT_ERA/PTT_Platform.yaml ...
+Writing all results in directory/folder PTT_ERA/RESULTS ...
+Reading KML PTT_ERA/PTT_Platform.kml ...
+***WARNING*** CLAMP_MSL : 30 m. (DEM biased)
+*** [1] Topography Reviewing ... ***
+        MSL  UNDUL   HAE   HSF
+count 2,619  2,619 2,619 2,619
+mean     30    -19    10    -2
+std       2      0     2     0
+min      26    -19     6    -2
+25%      29    -19     9    -2
+50%      30    -19    10    -2
+75%      31    -19    12    -1
+max      33    -19    13    -1
+============================================================
+Mean topo MSL over ROI : 30  m.
+Mean topo HAE over ROI : 10 m.
+k_0 PP coincided with topo : 1.0000016 (exact 7-digit)
+Mean Latitude of ROI    : ('09°04′', 9.066666666666666)
+Mean Longitude of ROI   : ('101°18′', 101.3)
+============================================================
+*** [2] SUGGESTION DESIGN ... ***
+LDP :
+   TMC : +proj=tmerc +lat_0=9.066666666666666 +lon_0=101.3 
+         +k_0=1.0000016 +x_0=+0 +y_0=+0 +ellps=GRS80 +units=m +no_defs
+   LCC : proj=lcc +lon_0=101.3 +lat_0=9.066666666666666
+         +lat_1=9.066666666666666  +k_0=1.0000016 
+         +x_0=+0 +y_0=+0 +ellps=GRS80 +units=m +no_defs
+   OMC : proj=omerc +lat_0=9.066666666666666 +lonc=101.3 
+         +x_0=+0 +y_0=+0 +alpha=+45 +k_0=1.0000016 
+         +ellps=GRS80 +units=m +no_defs 
+*** [3] PROCESSING LDP and PSF/CSF Analysis ... ***
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+UTM : +proj=utm +zone=47 +datum=WGS84 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+        UTM_E     UTM_N  UTM_PSF  UTM_CSF
+count   2,619     2,619    2,619    2,619
+mean  752,864 1,003,675      391      390
+std     1,559     1,400       10       10
+min   750,200 1,001,300      375      373
+25%   751,500 1,002,500      383      381
+50%   752,900 1,003,700      392      390
+75%   754,200 1,004,900      400      398
+max   755,500 1,006,100      408      407
+Plotting result in PTT_ERA/RESULTS/CSF_UTM.png ...
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+TMC : +proj=tmerc +lat_0=9.06666666666667 +lon_0=101.3 +k=1.0000016 +x_0=2500 +y_0=7000 +ellps=GRS80 +units=m +no_defs +type=crs
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+       TMC_E  TMC_N  TMC_PSF  TMC_CSF
+count  2,619  2,619    2,619    2,619
+mean   2,547  7,652        2        0
+std    1,558  1,400        0        0
+min     -131  5,261        2       -0
+25%    1,188  6,465        2       -0
+50%    2,577  7,668        2        0
+75%    3,887  8,872        2        0
+max    5,198 10,076        2        1
+Plotting result in PTT_ERA/RESULTS/CSF_TMC.png ...
+*** [4] Write report and sampling GIS file ... ***
