@@ -31,7 +31,10 @@ import pygeodesy as pgd
 import rasterio as rio
 from shapely.geometry import Polygon,LineString
 from collections import OrderedDict, namedtuple
-gpd.io.file.fiona.drvsupport.supported_drivers['KML'] = 'rw'
+
+from fiona.drvsupport import supported_drivers
+supported_drivers['KML'] = 'rw'
+#gpd.io.file.fiona.drvsupport.supported_drivers['KML'] = 'rw'
 import warnings
 
 WGS= CRS( 4326 )

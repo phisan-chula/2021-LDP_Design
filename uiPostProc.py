@@ -46,7 +46,8 @@ def MakeHSF(df_samp ):
 ####################################################################
 def PlotPoint( df,SYM,LDP,RESULT_DIR ):
     E = f'{SYM}_E' ;  N = f'{SYM}_N'
-    fig,ax = plt.subplots( figsize=(10,10))
+    plt.rcParams.update({'font.size': 18})
+    fig,ax = plt.subplots( figsize=(12,10))
     df.plot.scatter( x=E ,y=N,marker='^',s=128,alpha=0.5,ax=ax )
     ax.set_xlabel( f'{E} (m)' )
     ax.set_ylabel( f'{N} (m)' )
@@ -62,20 +63,21 @@ def PlotPoint( df,SYM,LDP,RESULT_DIR ):
     tick = StrMethodFormatter('{x:,.0f}')
     ax.xaxis.set_major_formatter( tick )
     ax.yaxis.set_major_formatter( tick )
-    for i,row in df.iterrows():
-        ann = ax.annotate( row.Stn,
-                  xy=(row[E], row[N]), xycoords='data',
-                  xytext=(32, -32),  textcoords='offset points',
-                  size=20, va="center", ha="center",
-                  bbox=dict(boxstyle="round4", fc="w"),
-                  arrowprops=dict(arrowstyle="-|>",
-                       connectionstyle="arc3,rad=-0.2", fc="w"),)
+    #for i,row in df.iterrows():
+    #    ann = ax.annotate( row.Stn,
+    #              xy=(row[E], row[N]), xycoords='data',
+    #              xytext=(32, -32),  textcoords='offset points',
+    #              size=20, va="center", ha="center",
+    #              bbox=dict(boxstyle="round4", fc="w"),
+    #              arrowprops=dict(arrowstyle="-|>",
+    #                   connectionstyle="arc3,rad=-0.2", fc="w"),)
+    ax.set_aspect( 'equal' )
     plt.grid(True)
     plt.setp(ax.get_xticklabels(), **{"rotation" :90})
     def_str = LDP.definition ; pos = len(def_str)//2
     plt.title( def_str[:pos]+'\n'+def_str[pos:] )
     fig.tight_layout()
-    plt.savefig( RESULT_DIR.joinpath( f'PNT_{SYM}.png' ) ) 
+    plt.savefig( RESULT_DIR.joinpath( f'PNT_{SYM}.svg' ), dpi=600 ) 
     #plt.show()
 
 ####################################################################

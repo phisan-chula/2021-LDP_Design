@@ -29,9 +29,10 @@ class ProjectPlotPPM:
             TITLE2 = 'Height Scale Factor from HAE : HSF in ppm'
         else:  # UTM etc...
             COL1 = f'{SYMB}_PSF' ; COL2 = f'{SYMB}_CSF'
-            TITLE1 = 'Projection Point Scale Factor : PSF in ppm'
+            TITLE1 = 'Point Scale Factor : PSF in ppm'
             TITLE2 = 'Combined Scale Factor : CSF in ppm'
 
+        plt.rcParams.update({'font.size': 18})
         fig,(ax1,ax2) = plt.subplots( 1,2, figsize=(24,12 ) )
         sc1 =ax1.scatter( DF_LDP.lng,DF_LDP.lat,c=DF_LDP[COL1], cmap='terrain' )
         col_sch = 'binary' if SYMB=='UTM' else 'Spectral'
@@ -47,14 +48,16 @@ class ProjectPlotPPM:
         else:
             self._PlotProjectionAxis( crs, ax1, ax2 )
             title = SYMB + ' : ' + crs.to_proj4()
-        plt.suptitle( title, size=16, y=0.990 ) 
+        plt.suptitle( title, size=20, y=0.975 ) 
         plt.tight_layout()
         #import pdb; pdb.set_trace()
         if SYMB=='TOPO':
-            self.PLOT_FIG = f'{RESULT_DIR}/HSF_{SYMB}.png' 
+            self.PLOT_FIG = f'{RESULT_DIR}/HSF_{SYMB}.svg' 
         else:
-            self.PLOT_FIG = f'{RESULT_DIR}/CSF_{SYMB}.png' 
-        plt.savefig( self.PLOT_FIG )
+            self.PLOT_FIG = f'{RESULT_DIR}/CSF_{SYMB}.svg' 
+        DPI = 600
+        print(f'##### ProjectPlotPPM() {self.PLOT_FIG} @ DPI={DPI} ########')
+        plt.savefig( self.PLOT_FIG, dpi=DPI  )
         #plt.show()
 
     ##############################################################
@@ -70,7 +73,8 @@ class ProjectPlotPPM:
         #################################################
         ax.ticklabel_format( useOffset=False)
         ax.tick_params(axis='x',rotation=45)
-        ax.set( xlabel='Longitude', ylabel='Latitude' )
+        ax.set_xlabel('Longitude' )
+        ax.set_ylabel('Latitude' )
         ax.set_aspect('equal', 'box')
         ax.grid( True )
 
